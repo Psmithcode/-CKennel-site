@@ -1,0 +1,34 @@
+.updateCard-image-container {
+  width: 333px;
+  height: 333px;
+  object-fit: cover;
+}
+
+.updateCard-image {
+  width: 100%;
+  height: 100%;
+}
+
+.updateCard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 333px;
+}
+.updateCards-container {
+  flex-wrap: wrap;
+}
+
+.roboto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.updateCard-body-text {
+  line-height: 25px;
+  text-indent: 10px;
+  margin-bottom: 20px;
+}
+.updateCard-link-text {
+  margin: 10px 0;
+}

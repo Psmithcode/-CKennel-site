@@ -1,0 +1,17 @@
+.updates-title {
+  text-decoration: overline;
+  text-decoration-color: black;
+  font-size: 26px;
+  margin: 50px 0 50px 0;
+  text-align: center;
+}
+
+.updates-container {
+  width: 63%;
+  margin-bottom: 50px;
+}
+
+.updateCards-container {
+  display: flex;
+  justify-content: space-between;
+}
