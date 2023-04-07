@@ -7,7 +7,7 @@ import dogPicture from "../Images/lab-wid.jpg";
 export default function Title() {
   return (
     <div className="title-container" id='title'>
-      <h1 className="title-text">Welcome to -C Kennel</h1>
+      <h1 className="title-text">Bar-C Kennels</h1>
       <p className="title-subtext">
         Purebred AKC Registered Labrador Retrievers based in Haskell, Texas.
       </p>

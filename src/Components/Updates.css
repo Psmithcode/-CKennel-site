@@ -9,9 +9,33 @@
 .updates-container {
   width: 63%;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .updateCards-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media only screen and (max-width: 960px) {
+  .updates-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .updates-container {
+    width: 90%;
+  }
+  .updateCards-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

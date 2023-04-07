@@ -1,0 +1,21 @@
+.login-container {
+  width: 100%;
+  height: 600px;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-input {
+  border: 1px solid burlywood;
+  margin: 10px 0;
+}
+
+.login-submit {
+  border: 1px solid burlywood;
+  background-color: #4e4630;
+}

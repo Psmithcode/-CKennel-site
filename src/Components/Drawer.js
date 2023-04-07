@@ -19,6 +19,9 @@ export default function SideMenu(props) {
       anchor="left"
       open={props.isDrawerOpen}
       onClose={() => props.setIsDrawerOpen(false)}
+      // sx={{
+      //   zIndex: theme.zIndex.appBar - 1,
+      // }}
     >
       <Box p={2} width="250px" textAlign="center" role="presentation">
         <a href="#title">
@@ -35,6 +38,9 @@ export default function SideMenu(props) {
         </a>
         <a href="#gallery">
           <Typography variant="h6">Gallery</Typography>
+        </a>
+        <a href="#contact">
+          <Typography variant="h6">Contact</Typography>
         </a>
       </Box>
     </Drawer>

@@ -25,6 +25,7 @@
 }
 
 .updateCard-body-text {
+  list-style-type: disc;
   line-height: 25px;
   text-indent: 10px;
   margin-bottom: 20px;
