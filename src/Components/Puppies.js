@@ -5,7 +5,7 @@ import "./Updates.css";
 
 // import PuppyPictureOne from "../Images/IMG_9445.jpg";
 // import UpdateCard from "./UpdateCard";
-import PuppyOne from "../Images/puppyCloseup.jpg";
+// import PuppyOne from "../Images/puppyCloseup.jpg";
 // import PuppyTwo from "../Images/pile1.jpg";
 // import PuppyThree from "../Images/pile2.jpg";
 import PuppyCard from "./PuppyCard";
@@ -14,7 +14,7 @@ export default function Puppies(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/puppies")
+      .get("https://barclabs.vercel.app/puppies")
       .then((response) => setData(response.data))
       .catch((error) => console.error(error));
   }, []);

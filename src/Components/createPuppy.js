@@ -153,7 +153,7 @@ export default function CreatePuppy() {
         image: secureUrl,
       };
 
-      await axios.post("http://localhost:8080/puppies", puppyData);
+      await axios.post("https://barclabs.vercel.app/puppies", puppyData);
 
       setLoading(false);
       console.log("Form submitted successfully!");

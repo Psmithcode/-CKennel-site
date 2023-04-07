@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8080/login", {
+    const response = await fetch("https://barclabs.vercel.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
