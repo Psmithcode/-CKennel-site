@@ -38,5 +38,15 @@
 @media only screen and (max-width: 960px) {
   .about-container {
     width: 90%;
+    padding: 5px;
+  }
+  .about-list-container{
+    width: 90%;
+  }
+  .about-list-body-text{
+    width: 90%;
+  }
+  .about-list{
+    line-height: 20px;
   }
 }

@@ -10,3 +10,8 @@
 .admin-title {
   font-size: 50px;
 }
+.admin-form-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}

@@ -9,7 +9,7 @@ export default function PupppyCard(props) {
       <div className="puppyCard-post-container">
         <div className="puppyCard-image-container">
           {/* <img src={props.image} className="puppyCard-image" alt="puppys" /> */}
-          <Image cloudName={"didcw4ntc"} publicId={props.imageName}>
+          <Image className="puppyCard-image" cloudName={"didcw4ntc"} publicId={props.imageName}>
             <Transformation crop="scale" width="333" height="260" />
           </Image>
         </div>

@@ -1,57 +1,57 @@
 .puppyCard-image-container {
-    width: 333px;
-    height: 260px;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .puppyCard-image {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .puppyCard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 333px;
-  }
-  .puppyCards-container {
-    flex-wrap: wrap;
-  }
-  
-  .roboto {
-    font-family: "Roboto Slab", serif;
-    font-weight: 400;
-  }
-  
-  .puppyCard-list-text {
-    list-style-type: none;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    font-weight: 600;
-  }
-  .puppyCard-link-text {
-    margin: 10px 0 0 10px;
-  }
-  
-  .puppyCard-post-container{
-    border: 1px solid black;
-    margin-bottom: 20px;
-  }
+  width: 333px;
+  height: 260px;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .puppyCard-title{
-    font-size: 20px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    text-align: center;
-  }
-  .puppyCard-list{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-evenly;
-  }
+.puppyCard-image {
+  width: 100%;
+  height: 100%;
+}
+
+.puppyCard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 333px;
+}
+.puppyCards-container {
+  flex-wrap: wrap;
+}
+
+.roboto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.puppyCard-list-text {
+  list-style-type: none;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.puppyCard-link-text {
+  margin: 10px 0 0 10px;
+}
+
+.puppyCard-post-container {
+  /* border: 1px solid black; */
+  margin-bottom: 20px;
+}
+
+.puppyCard-title {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+.puppyCard-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
