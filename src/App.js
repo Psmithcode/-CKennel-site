@@ -7,19 +7,21 @@ import Admin from "./Components/Admin";
 import PrivateRoute from "./Components/PrivateRoute";
 import { Provider } from "react-redux";
 import store from "./redux/store";
-
+import UpdateDetails from "./containers/updateDetails";
+import PuppyDetails from "./containers/puppyDetails";
+// import { createTheme } from "@mui/material";
 
 // const theme = createTheme({
 //   palette: {
 //     mode: "light",
 //     primary: {
-//       main: "#4e4630",
+//       main: "#AD8E70",
 //     },
 //     secondary: {
 //       main: "#f50057",
 //     },
 //     background: {
-//       default: "#716b59",
+//       default: "#AD8E70",
 //     },
 //   },
 // });
@@ -32,6 +34,8 @@ function App() {
           <Route exact path="/" element={<Page />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<PrivateRoute component={Admin} />} />
+          <Route path="/updates/:id" element={<UpdateDetails />} />
+          <Route path="/puppies/:id" element={<PuppyDetails />} />
         </Routes>
       </BrowserRouter>
     </Provider>

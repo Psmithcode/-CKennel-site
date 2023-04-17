@@ -1,10 +1,12 @@
 import React from "react";
-import "./Reviews.css";
+import "../styles/Reviews.css";
+import AddReview from "./AddReview";
 
 export default function Reviews() {
   return (
     <div className="reviews-container" id="reviews">
       REVIEWS
+      <AddReview />
     </div>
   );
 }

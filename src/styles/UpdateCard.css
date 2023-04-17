@@ -1,9 +1,9 @@
-
 .updateCard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 333px;
+  /* border: 1px solid black; */
 }
 .updateCards-container {
   flex-wrap: wrap;
@@ -19,7 +19,18 @@
   line-height: 25px;
   text-indent: 10px;
   margin-bottom: 20px;
+  padding: 5px;
 }
-.updateCard-link-text {
+.updateCard-date {
   margin: 10px 0;
+  font-size: 12px;
+}
+.updateCard-link:hover{
+  border-bottom: 2px solid #4e4630;
+}
+
+.updateCard-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #79634e;
 }

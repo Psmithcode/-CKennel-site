@@ -1,0 +1,126 @@
+.puppyCard-image-container {
+  width: 290px;
+  height: 240px;
+  /* object-fit: cover; */
+  /* display: flex; */
+  /* object-position: center; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.puppyCard-image {
+  /* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* background-color: black; */
+  border-radius: 5px;
+}
+
+.puppyCard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  margin-bottom: 20px;
+  display: flex;
+  /* flex-direction: row; */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+  border-radius: 5px;
+}
+
+.puppyCard-container:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+.puppyCards-container {
+  flex-wrap: wrap;
+}
+
+.puppyCard-paw-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paw-image {
+  width: 100%;
+  height: 100%;
+}
+
+.puppyCard-paws-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  height: 240px;
+}
+
+.puppyCard-middle-container{
+  display: flex;
+}
+
+.puppyCard-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px 0 5px 10px;
+}
+.size1 {
+  width: 40px;
+  height: 40px;
+}
+
+.roboto {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.puppyCard-list-text {
+  list-style-type: none;
+  color: #79634e;
+
+  /* margin-left: 10px; */
+  font-weight: 600;
+  font-size: 15px;
+}
+.puppyCard-link-text {
+  margin: 10px 0 0 10px;
+}
+
+.puppyCard-post-container {
+  margin-bottom: 20px;
+}
+
+.size2 {
+  width: 40px;
+  height: 40px;
+  /* margin-top: 60px; */
+}
+.puppyCard-bottom-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.puppyCard-top-container {
+  display: flex;
+  height: 241px;
+}
+
+.puppyCard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: rgb(121, 99, 78);
+  text-align: center;
+  margin-left: 5px;
+}
+.puppyCard-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 20px;
+}

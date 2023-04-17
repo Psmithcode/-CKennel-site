@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
-  margin: 70px 0 50px 0;
+  margin: 133px 0 50px 0;
 }
 
 .title-text {
@@ -28,7 +28,7 @@
   object-fit: cover;
   margin: 0;
   padding: 0;
-  object-position: top;
+  object-position: center;
 }
 
 .image-container {
@@ -41,8 +41,31 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .title-container{
+  .title-container {
     width: 100%;
   }
-  
+}
+
+@media only screen and (max-width: 480px) {
+  .title-text {
+    line-height: 60px;
+    font-size: 75px;
+    width: auto;
+  }
+
+  .title-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title-subtext {
+    font-size: 18px;
+    width: 68%;
+    text-align: center;
+    display: flex;
+  }
+  .image-container {
+    height: 300px;
+  }
 }

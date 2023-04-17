@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./Updates.css";
+import "../styles/Updates.css";
+
 
 // import PuppyPictureOne from "../Images/IMG_9445.jpg";
 // import UpdateCard from "./UpdateCard";
@@ -27,13 +28,16 @@ export default function Puppies(props) {
         {data.map((puppy, index) => {
           return (
             <PuppyCard
+              key={index}
+              id={puppy.id}
               imageName={puppy.image}
               name={puppy.name}
-              date={puppy.date_added}
-              text1={puppy.text1}
-              text2={puppy.text2}
-              text3={puppy.text3}
-              text4={puppy.text4}
+              whelpedDate={puppy.whelped_date}
+              readyDate={puppy.ready_date}
+              sire={puppy.sire}
+              dam={puppy.dam}
+              vaccinated={puppy.vaccinated}
+              price={puppy.price}
             />
           );
         })}

@@ -1,0 +1,16 @@
+.addReview-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.1);
+  gap: 10px;
+  padding: 10px;
+}
+
+.addReview-form > label {
+  font-size: 20px;
+  color: white;
+}
+
+.addReview-input {
+  background-color: white;
+}

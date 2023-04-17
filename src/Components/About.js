@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "../styles/About.css";
 
 export default function About(props) {
   return (
@@ -22,50 +22,30 @@ export default function About(props) {
       <div className="about-list-container">
         <ul className="about-list">
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
           <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
+          Donec a eros dignissim, placerat felis in, rhoncus metus. Quisque dapibus sem a felis placerat, eget vulputate arcu commodo.
           </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            enunc nisi. Donec cursus dui eu odio iaculis blandit ac blandit sem.
-            Inconsequat dolor non ultrices sagittis
-          </li>
+         
         </ul>
       </div>
     </div>

@@ -7,8 +7,8 @@ import Header from "./Components/Header";
 import Title from "./Components/Title";
 // import Litters from "./Components/Litters";
 // import Parents from "./Components/Parents";
-import { createTheme, ThemeProvider } from "@mui/material";
-import Updates from "./Components/Updates";
+import { ThemeProvider, createTheme } from "@mui/material";
+import Updates from "./containers/updates";
 import Puppies from "./Components/Puppies";
 import Reviews from "./Components/Reviews";
 import Gallery from "./Components/Gallery";
@@ -18,13 +18,13 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#4e4630",
+      main: "rgb(121, 99, 78)",
     },
     secondary: {
       main: "#f50057",
     },
-    background: {
-      default: "#716b59",
+    text: {
+      secondary: "#AD8E70",
     },
   },
 });
@@ -35,7 +35,7 @@ function Page() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <Header setIsDrawerOpen={setIsDrawerOpen} />
+        <Header setIsDrawerOpen={setIsDrawerOpen} isDrawerOpen={isDrawerOpen} />
         <Drawer isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
         <Title />
         <Updates />

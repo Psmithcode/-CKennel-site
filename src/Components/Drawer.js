@@ -11,6 +11,8 @@ import Drawer from "@mui/material/Drawer";
 // import InboxIcon from "@mui/icons-material/MoveToInbox";
 // import MailIcon from "@mui/icons-material/Mail";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 export default function SideMenu(props) {
   //   const [isDrawerOpen, setIsDrawerOpen] = props;
@@ -19,11 +21,12 @@ export default function SideMenu(props) {
       anchor="left"
       open={props.isDrawerOpen}
       onClose={() => props.setIsDrawerOpen(false)}
-      // sx={{
-      //   zIndex: theme.zIndex.appBar - 1,
-      // }}
+      style={{
+        marginTop: "64px",
+        zIndex: 1,
+      }}
     >
-      <Box p={2} width="250px" textAlign="center" role="presentation">
+      <Box p={2} width="250px" textAlign="center" role="presentation" sx={{marginTop: "64px"}}>
         <a href="#title">
           <Typography variant="h6">Home</Typography>
         </a>
@@ -42,6 +45,15 @@ export default function SideMenu(props) {
         <a href="#contact">
           <Typography variant="h6">Contact</Typography>
         </a>
+        <Link to="/login">
+          <Button variant="contained" color="primary" sx={{
+            position: "absolute",
+            bottom: "10px",
+            left: "30%"
+          }}>
+            Login
+          </Button>
+        </Link>
       </Box>
     </Drawer>
   );

@@ -1,25 +1,25 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import "./Updates.css";
+// import axios from "axios";
+import "../styles/Updates.css";
 
 import UpdateCard from "./UpdateCard";
 
 export default function Updates(props) {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
+  const { updates, fetchUpdates } = props;
+  // console.log(props)
   useEffect(() => {
-    axios
-      .get("https://barclabs.vercel.app/updates")
-      .then((response) => setData(response.data))
-      .catch((error) => console.error(error));
+    fetchUpdates();
   }, []);
   return (
     <div className="updates-container" id="updates">
       <h2 className="updates-title">Updates</h2>
       <div className="updateCards-container">
-        {data.map((update, index) => {
+        {updates.map((update, index) => {
           return (
             <UpdateCard
+              key={index}
               id={update.id}
               title={update.title}
               date={update.date_added}

@@ -9,9 +9,25 @@
   color: white;
 }
 
+.createUpdate-modal-container {
+  background-color: rgba(128, 128, 128, 0.6);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .createUpdate-title {
   font-size: 40px;
   text-align: center;
+}
+
+.createUpdate-exit {
+  width: 10%;
+  background-color: white;
+  color: #4e4630;
 }
 
 .createUpdate-form > label {

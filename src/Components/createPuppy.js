@@ -1,16 +1,26 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button } from "@mui/material";
-import "./createPuppy.css";
+import "../styles/createPuppy.css";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Radio from "@mui/material/Radio";
 
 export default function CreatePuppy() {
+  const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState("");
   const [image, setImage] = useState(null);
-  const [text1, setText1] = useState("");
-  const [text2, setText2] = useState("");
-  const [text3, setText3] = useState("");
-  const [text4, setText4] = useState("");
+  const [price, setPrice] = useState("");
+  const [dateWhelped, setDateWhelped] = useState("");
+  const [dateReady, setDateReady] = useState("");
+  const [sire, setSire] = useState("");
+  const [dam, setDam] = useState("");
   const [loading, setLoading] = useState(false);
+  const [selectedValue, setSelectedValue] = useState("");
+
+  const handleChange = (event) => {
+    setSelectedValue(event.target.value);
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,16 +35,18 @@ export default function CreatePuppy() {
         "https://api.cloudinary.com/v1_1/didcw4ntc/image/upload",
         formData
       );
-
-      const secureUrl = cloudinaryRes.data.secure_url;
+      // const secureUrl = cloudinaryRes.data.secure_url;
+      const publicId = cloudinaryRes.data.public_id;
 
       const puppyData = {
         name,
-        text1,
-        text2,
-        text3,
-        text4,
-        image: secureUrl,
+        dateWhelped,
+        dateReady,
+        price,
+        selectedValue,
+        sire,
+        dam,
+        image: publicId,
       };
 
       await axios.post("https://barclabs.vercel.app/puppies", puppyData);
@@ -47,70 +59,237 @@ export default function CreatePuppy() {
     }
   };
 
+  if (!isVisible) {
+    return (
+      <Button
+        variant="contained"
+        onClick={() => {
+          setIsVisible(true);
+        }}
+      >
+        Create Puppy
+      </Button>
+    );
+  }
+
+  if (isVisible) {
+    return (
+      <div className="createPuppy-modal-container">
+        <form onSubmit={handleSubmit} className="createPuppy-form">
+          <Button
+            className="createUpdate-exit"
+            variant="contained"
+            onClick={() => {
+              setIsVisible(false);
+            }}
+          >
+            X
+          </Button>
+          <h1 className="createPuppy-title">Create a Puppy</h1>
+          <label>Name:</label>
+          <input
+            type="text"
+            className="createPuppy-input"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <br />
+          <label>Profile Picture:</label>
+          <input
+            className="createPuppy-image-input"
+            type="file"
+            accept="image/*"
+            name="image"
+            onChange={(e) => setImage(e.target.files[0])}
+          />
+          <br />
+          <label>Whelped:</label>
+          <input
+            className="createPuppy-input"
+            type="date"
+            value={dateWhelped}
+            onChange={(e) => setDateWhelped(e.target.value)}
+          />
+          <br />
+          <label>Ready:</label>
+          <input
+            className="createPuppy-input"
+            type="date"
+            value={dateReady}
+            onChange={(e) => setDateReady(e.target.value)}
+          />
+          <br />
+          <label>Sire:</label>
+          <input
+            className="createPuppy-input"
+            type="text"
+            value={sire}
+            onChange={(e) => setSire(e.target.value)}
+          />
+          <br />
+
+          <label>Dam:</label>
+          <input
+            className="createPuppy-input"
+            type="text"
+            value={dam}
+            onChange={(e) => setDam(e.target.value)}
+          />
+
+          <br />
+
+          <label>Current Vaccinations and worming?</label>
+          <RadioGroup
+            aria-label="YesNo"
+            name="YesNo"
+            value={selectedValue}
+            onChange={handleChange}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "10px",
+            }}
+          >
+            <FormControlLabel
+              value="yes"
+              control={<Radio />}
+              label="Yes"
+              onClick={() => {
+                console.log(selectedValue);
+              }}
+            />
+            <FormControlLabel
+              value="no"
+              control={<Radio />}
+              label="No"
+              onClick={() => {
+                console.log(selectedValue);
+              }}
+            />
+          </RadioGroup>
+          <br />
+
+          <label>Price:</label>
+          <input
+            className="createPuppy-input"
+            type="text"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+
+          {loading ? (
+            <Button variant="contained" className="createPuppy-submit">
+              Submitting Form
+            </Button>
+          ) : (
+            <Button
+              variant="contained"
+              color="primary"
+              className="createPuppy-submit"
+              type="submit"
+            >
+              Submit Form
+            </Button>
+          )}
+        </form>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="createPuppy-form">
       <h1 className="createPuppy-title">Create a Puppy</h1>
-      <label>
-        Name:
-        </label>
-        <input
-          type="text"
-          className="createPuppy-input"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+      <label>Name:</label>
+      <input
+        type="text"
+        className="createPuppy-input"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <br />
-      <label>
-        Text 1:
-        </label>
-        <input
-          className="createPuppy-input"
-          type="text"
-          value={text1}
-          onChange={(e) => setText1(e.target.value)}
-        />
-      <br />
-      <label>
-        Text 2:
-        </label>
-        <input
-          className="createPuppy-input"
-          type="text"
-          value={text2}
-          onChange={(e) => setText2(e.target.value)}
-        />
-      <br />
-      <label>
-        Text 3:
-        </label>
-        <input
-          className="createPuppy-input"
-          type="text"
-          value={text3}
-          onChange={(e) => setText3(e.target.value)}
-        />
-      <br />
-      <label>
-        Text 4:
-        </label>
-        <input
-          className="createPuppy-input"
-          type="text"
-          value={text4}
-          onChange={(e) => setText4(e.target.value)}
-        />
-      <br />
-      <label>
-        Profile Picture:
-        </label>
-        <input
+      <label>Profile Picture:</label>
+      <input
         className="createPuppy-image-input"
-          type="file"
-          accept="image/*"
-          name="image"
-          onChange={(e) => setImage(e.target.files[0])}
-        />
+        type="file"
+        accept="image/*"
+        name="image"
+        onChange={(e) => setImage(e.target.files[0])}
+      />
       <br />
+      <label>Whelped:</label>
+      <input
+        className="createPuppy-input"
+        type="date"
+        value={dateWhelped}
+        onChange={(e) => setDateWhelped(e.target.value)}
+      />
+      <br />
+      <label>Ready:</label>
+      <input
+        className="createPuppy-input"
+        type="date"
+        value={dateReady}
+        onChange={(e) => setDateReady(e.target.value)}
+      />
+      <br />
+      <label>Sire:</label>
+      <input
+        className="createPuppy-input"
+        type="text"
+        value={sire}
+        onChange={(e) => setSire(e.target.value)}
+      />
+      <br />
+
+      <label>Dam:</label>
+      <input
+        className="createPuppy-input"
+        type="text"
+        value={dam}
+        onChange={(e) => setDam(e.target.value)}
+      />
+
+      <br />
+
+      <label>Current Vaccinations and worming?</label>
+      <RadioGroup
+        aria-label="YesNo"
+        name="YesNo"
+        value={selectedValue}
+        onChange={handleChange}
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          marginLeft: "10px",
+        }}
+      >
+        <FormControlLabel
+          value="yes"
+          control={<Radio />}
+          label="Yes"
+          onClick={() => {
+            console.log(selectedValue);
+          }}
+        />
+        <FormControlLabel
+          value="no"
+          control={<Radio />}
+          label="No"
+          onClick={() => {
+            console.log(selectedValue);
+          }}
+        />
+      </RadioGroup>
+      <br />
+
+      <label>Price:</label>
+      <input
+        className="createPuppy-input"
+        type="text"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+      />
+
       {loading ? (
         <Button variant="contained" className="createPuppy-submit">
           Submitting Form

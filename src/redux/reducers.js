@@ -8,6 +8,13 @@ const puppies = (state = [], action) => {
       return state;
   }
 };
+const updates = (state = [], action) => {
+  switch (action.type) {
+    case "FETCH_UPDATES":
+      return action.value;
+    default:
+      return state;
+  }
+};
 
-export default combineReducers({ puppies });
-    
+export default combineReducers({ puppies, updates });
