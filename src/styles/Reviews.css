@@ -1,13 +1,22 @@
 .reviews-container {
   width: 65%;
-  height: 500px;
-  background-color: gray;
+  height: auto;
+  background-color: rgb(121, 99, 78);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 60px;
   margin-bottom: 50px;
+  padding: 10px;
+}
+
+.review-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 @media only screen and (max-width: 960px) {

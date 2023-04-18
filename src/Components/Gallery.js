@@ -9,7 +9,7 @@ export default function Gallery() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("http://res.cloudinary.com/didcw4ntc/image/list/gallery.json", {
+    fetch("http://res.cloudinary.com/didcw4ntc/image", {
       type: "list",
       sign_url: true,
     }).then((res) => {

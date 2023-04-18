@@ -25,13 +25,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content:center;padding-top: 15px;
   font-size: 25px;
   color: white;
 }
 
 .contact-text-container > h3 {
-  margin-bottom: 35px;
+  margin-bottom: 5px;
 }
 
 .contact-form-input {

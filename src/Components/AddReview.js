@@ -21,6 +21,7 @@ const style = {
 export default function AddReview() {
   const [open, setOpen] = React.useState(false);
   const [name, setName] = React.useState("");
+  const [title, setTitle] = React.useState("");
   const [rating, setRating] = React.useState(0);
   const [message, setMessage] = React.useState("");
 
@@ -34,6 +35,7 @@ export default function AddReview() {
       const reviewData = {
         name,
         rating,
+        title,
         message,
       };
       console.log(reviewData);
@@ -50,23 +52,6 @@ export default function AddReview() {
 
     handleClose();
   };
-  //   const handleSubmit = (event) => {
-  //     event.preventDefault();
-
-  //     Here, you can submit the form data to your backend or do other actions
-
-  //     console.log("Name:", name);
-  //     console.log("Rating:", rating);
-  //     console.log("Message:", message);
-
-  //     // Reset the form fields
-  //     setName("");
-  //     setRating(0);
-  //     setMessage("");
-
-  //     Close the modal
-  //     handleClose();
-  //   };
 
   return (
     <div>
@@ -93,7 +78,14 @@ export default function AddReview() {
                 value={name}
                 onChange={(event) => setName(event.target.value)}
               />
-              <label>Choose Rating:</label>
+              <label>Review Title:</label>
+              <input
+                className="addReview-input"
+                type="text"
+                value={title}
+                onChange={(event) => setTitle(event.target.value)}
+              />
+              <label>Rating:</label>
               <Rating
                 name="simple-controlled"
                 value={rating}
