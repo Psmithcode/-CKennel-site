@@ -9,15 +9,16 @@ export default function Reviews() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/reviews")
+      .get("https://barclabs.vercel.app/reviews")
       .then((response) => setData(response.data))
       .catch((error) => console.error(error));
   }, []);
 
   return (
     <div className="reviews-container" id="reviews">
+      <h1 className="reviews-title">Reviews</h1>
       <div className="review-card-container">
-        {data.slice(0, 3).map((review, index) => {
+        {data.map((review, index) => {
           return (
             <ReviewCard
               key={index}
