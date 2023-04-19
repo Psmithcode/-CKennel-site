@@ -9,12 +9,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 export default function ButtonAppBar(props) {
   const { theme } = props;
   return (
-    <AppBar position="sticky" className="header" sx={{ zIndex: 3 }}>
+    <AppBar
+      position="sticky"
+      className="header"
+      sx={{ zIndex: 3, backgroundColor: "var(--dark)" }}
+    >
       <Toolbar>
         <IconButton
           size="large"
           edge="start"
-          color={props.theme}
+          // color={props.theme}
           id="menu-icon"
           onClick={() => props.setIsDrawerOpen(!props.isDrawerOpen)}
         >

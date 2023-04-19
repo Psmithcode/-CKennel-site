@@ -56,7 +56,7 @@ export default function AddReview() {
   return (
     <div>
       <Button
-        sx={{ textTransform: "none" }}
+        sx={{ textTransform: "none", backgroundColor: "var(--dark)" }}
         onClick={handleOpen}
         variant="contained"
       >

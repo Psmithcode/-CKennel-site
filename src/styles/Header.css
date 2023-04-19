@@ -2,14 +2,24 @@
   width: 100%;
   height: 7%;
   /* background-color: #ad8e70; */
-  color: #ad8e70;
+  color: white;
   font-size: 300%;
   position: sticky;
   top: 0;
   z-index: 1;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.header-button-container {
+  width: 100%;
+}
+
+.header-button{
+  font-size: 12px;
+  border-radius: 10px;
 }
 
 .flex-row-center {

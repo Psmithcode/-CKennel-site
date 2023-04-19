@@ -93,7 +93,7 @@ export default function CreatePuppy() {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-          <br />
+
           <label>Profile Picture:</label>
           <input
             className="createPuppy-image-input"
@@ -102,7 +102,7 @@ export default function CreatePuppy() {
             name="image"
             onChange={(e) => setImage(e.target.files[0])}
           />
-          <br />
+
           <label>Whelped:</label>
           <input
             className="createPuppy-input"
@@ -110,7 +110,7 @@ export default function CreatePuppy() {
             value={dateWhelped}
             onChange={(e) => setDateWhelped(e.target.value)}
           />
-          <br />
+
           <label>Ready:</label>
           <input
             className="createPuppy-input"
@@ -118,7 +118,7 @@ export default function CreatePuppy() {
             value={dateReady}
             onChange={(e) => setDateReady(e.target.value)}
           />
-          <br />
+
           <label>Sire:</label>
           <input
             className="createPuppy-input"
@@ -126,7 +126,6 @@ export default function CreatePuppy() {
             value={sire}
             onChange={(e) => setSire(e.target.value)}
           />
-          <br />
 
           <label>Dam:</label>
           <input
@@ -135,8 +134,6 @@ export default function CreatePuppy() {
             value={dam}
             onChange={(e) => setDam(e.target.value)}
           />
-
-          <br />
 
           <label>Current Vaccinations and worming?</label>
           <RadioGroup
@@ -167,7 +164,6 @@ export default function CreatePuppy() {
               }}
             />
           </RadioGroup>
-          <br />
 
           <label>Price:</label>
           <input
@@ -206,7 +202,7 @@ export default function CreatePuppy() {
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <br />
+
       <label>Profile Picture:</label>
       <input
         className="createPuppy-image-input"
@@ -215,7 +211,7 @@ export default function CreatePuppy() {
         name="image"
         onChange={(e) => setImage(e.target.files[0])}
       />
-      <br />
+
       <label>Whelped:</label>
       <input
         className="createPuppy-input"
@@ -223,7 +219,7 @@ export default function CreatePuppy() {
         value={dateWhelped}
         onChange={(e) => setDateWhelped(e.target.value)}
       />
-      <br />
+
       <label>Ready:</label>
       <input
         className="createPuppy-input"
@@ -231,7 +227,7 @@ export default function CreatePuppy() {
         value={dateReady}
         onChange={(e) => setDateReady(e.target.value)}
       />
-      <br />
+
       <label>Sire:</label>
       <input
         className="createPuppy-input"
@@ -239,7 +235,6 @@ export default function CreatePuppy() {
         value={sire}
         onChange={(e) => setSire(e.target.value)}
       />
-      <br />
 
       <label>Dam:</label>
       <input
@@ -248,8 +243,6 @@ export default function CreatePuppy() {
         value={dam}
         onChange={(e) => setDam(e.target.value)}
       />
-
-      <br />
 
       <label>Current Vaccinations and worming?</label>
       <RadioGroup
@@ -280,7 +273,6 @@ export default function CreatePuppy() {
           }}
         />
       </RadioGroup>
-      <br />
 
       <label>Price:</label>
       <input

@@ -1,10 +1,10 @@
 .createPuppy-input {
   border: 1px solid black;
-  margin: 10px 0 5px 10px;
+  margin: 5px 0 0 0;
   background-color: white;
   color: black;
   width: 80%;
-  line-height: 30px;
+  line-height: 16px;
 }
 .createPuppy-submit {
   width: 100%;
@@ -16,6 +16,8 @@
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  
   width: 500px;
   color: white;
   z-index: 2;
@@ -27,11 +29,11 @@
 
 .createPuppy-form > label {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .createPuppy-title {
-  font-size: 40px;
+  font-size: 25px;
   text-align: center;
 }
 

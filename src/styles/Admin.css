@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #716b59;
+  background-color: var(--lightest);
+  color: white;
 }
 .admin-title {
   font-size: 50px;

@@ -1,7 +1,7 @@
 .reviews-container {
   width: 65%;
   height: auto;
-  background-color: rgb(121, 99, 78);
+  background-color: var(--lightest);
   display: flex;
   flex-direction: column;
   align-items: center;
