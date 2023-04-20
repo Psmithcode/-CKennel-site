@@ -39,7 +39,7 @@ export default function AddReview() {
         message,
       };
       console.log(reviewData);
-      await axios.post("https://barclabs.vercel.app/reviews", reviewData);
+      await axios.post(`${process.env.REACT_APP_URL_REVIEWS}`, reviewData);
 
       console.log("Form submitted successfully!");
     } catch (err) {

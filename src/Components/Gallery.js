@@ -14,7 +14,7 @@ export default async function Gallery() {
     {
       headers: {
         Authorization: `Basic ${Buffer.from(
-          process.env.CLOUD_API_KEY + ":" + process.env.CLOUD_API_SECRET
+          process.env.REACT_APP_CLOUD_API_KEY + ":" + process.env.REACT_APP_CLOUD_API_SECRET
         ).toString("base64")}`,
       },
     }

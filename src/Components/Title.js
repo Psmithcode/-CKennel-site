@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Fade } from "react-reveal";
 
 export default function Title(props) {
+  
   function handleClick() {
     const targetElement = document.getElementById("#contact");
     window.scrollTo({

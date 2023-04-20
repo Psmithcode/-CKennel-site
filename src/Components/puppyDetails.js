@@ -25,7 +25,7 @@ export default function PuppyDetails(props) {
 
   const cloud = new Cloudinary({
     cloud: {
-      cloudName: "didcw4ntc",
+      cloudName: process.env.REACT_APP_CLOUD_NAME,
     },
   });
   const image = cloud.image(Puppie.image);

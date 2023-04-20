@@ -17,7 +17,7 @@ export default function DeletePuppy() {
         name,
       };
 
-      await axios.delete("https://barclabs.vercel.app/puppies", {
+      await axios.delete(process.env.REACT_APP_URL_PUPPIES, {
         data: puppyData,
       });
       console.log(puppyData);

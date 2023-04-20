@@ -19,7 +19,7 @@ export default function CreateUpdate(props) {
     };
 
     try {
-      await axios.post("https://barclabs.vercel.app/updates", updateData);
+      await axios.post(process.env.REACT_APP_URL_UPDATES, updateData);
       console.log("update posted successfully!");
     } catch (err) {
       console.log("Error posting to /updates", err);

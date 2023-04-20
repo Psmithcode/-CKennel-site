@@ -10,7 +10,7 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://barclabs.vercel.app/login", {
+    const response = await fetch(process.env.REACT_APP_URL_LOGIN, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

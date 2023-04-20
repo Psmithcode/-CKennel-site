@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 export default function PupppyCard(props) {
   const cloud = new Cloudinary({
     cloud: {
-      cloudName: "didcw4ntc",
+      cloudName: `${process.env.REACT_APP_CLOUD_NAME}`,
     },
   });
 

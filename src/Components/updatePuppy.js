@@ -27,7 +27,7 @@ export default function UpdatePuppy() {
         dam,
       };
 
-      await axios.put("https://barclabs.vercel.app/puppies", puppyData);
+      await axios.put(process.env.REACT_APP_URL_PUPPIES, puppyData);
       console.log(puppyData);
 
       setLoading(false);

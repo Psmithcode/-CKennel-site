@@ -10,7 +10,7 @@ export default function Reviews() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("https://barclabs.vercel.app/reviews")
+      .get(process.env.REACT_APP_URL_REVIEWS)
       .then((response) => setData(response.data))
       .catch((error) => console.error(error));
   }, []);

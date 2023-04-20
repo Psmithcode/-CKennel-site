@@ -1,8 +1,7 @@
-const url = "https://barclabs.vercel.app/puppies";
 
 export const fetchPuppies = () => {
   return (dispatch) => {
-    fetch(url)
+    fetch(process.env.REACT_APP_URL_PUPPIES)
       .then((res) => res.json())
       .then((response) => {
         const action = {
@@ -23,7 +22,7 @@ export const deletePuppy = (index) => {
 
 export const fetchUpdates = () => {
   return (dispatch) => {
-    fetch("https://barclabs.vercel.app/updates")
+    fetch(process.env.REACT_APP_URL_UPDATES)
       .then((res) => res.json())
       .then((response) => {
         // console.log("************************************", response);

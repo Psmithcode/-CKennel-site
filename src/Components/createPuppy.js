@@ -32,7 +32,7 @@ export default function CreatePuppy() {
       formData.append("upload_preset", "nskblihj");
 
       const cloudinaryRes = await axios.post(
-        "https://api.cloudinary.com/v1_1/didcw4ntc/image/upload",
+        process.env.REACT_APP_CLOUDINARY_UPLOAD,
         formData
       );
       const publicId = cloudinaryRes.data.public_id;
@@ -48,7 +48,7 @@ export default function CreatePuppy() {
         image: publicId,
       };
 
-      await axios.post("https://barclabs.vercel.app/puppies", puppyData);
+      await axios.post(process.env.REACT_APP_URL_PUPPIES, puppyData);
 
       setLoading(false);
       console.log("Form submitted successfully!");
