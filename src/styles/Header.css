@@ -1,49 +1,11 @@
+.nav-link {
+  font-size: 13px;
+}
+
+.header-title {
+  font-size: 20px;
+}
 .header {
+  justify-content: space-evenly;
   width: 100%;
-  height: 7%;
-  /* background-color: #ad8e70; */
-  color: white;
-  font-size: 300%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-button-container {
-  width: 100%;
-}
-
-.header-button{
-  font-size: 12px;
-  border-radius: 10px;
-}
-
-.flex-row-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* #AD8E70 */
-/* rgb(173, 142, 112) */
-
-.card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-
-.header-title-menu-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-left: 20px;
-}
-
-h1 {
-  font-family: "Tiro Devanagari Hindi", serif;
 }

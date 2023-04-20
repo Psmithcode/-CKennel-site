@@ -1,12 +1,9 @@
 import React from "react";
 import "../styles/PuppyCard.css";
-// import { Transformation } from "cloudinary-react";
 import { AdvancedImage } from "@cloudinary/react";
 
-// Import required actions.
 import { fill } from "@cloudinary/url-gen/actions/resize";
 
-// Import required qualifiers.
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
 import paw from "../paw.jpg";
@@ -21,7 +18,6 @@ export default function PupppyCard(props) {
   });
 
   const image = cloud.image(props.imageName);
-  // image.resize(scale().width(290))
   image.resize(fill().width(290).height(240).gravity(autoGravity()));
 
   return (

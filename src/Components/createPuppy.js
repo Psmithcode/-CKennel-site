@@ -35,7 +35,6 @@ export default function CreatePuppy() {
         "https://api.cloudinary.com/v1_1/didcw4ntc/image/upload",
         formData
       );
-      // const secureUrl = cloudinaryRes.data.secure_url;
       const publicId = cloudinaryRes.data.public_id;
 
       const puppyData = {
@@ -191,111 +190,4 @@ export default function CreatePuppy() {
       </div>
     );
   }
-
-  return (
-    <form onSubmit={handleSubmit} className="createPuppy-form">
-      <h1 className="createPuppy-title">Create a Puppy</h1>
-      <label>Name:</label>
-      <input
-        type="text"
-        className="createPuppy-input"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-
-      <label>Profile Picture:</label>
-      <input
-        className="createPuppy-image-input"
-        type="file"
-        accept="image/*"
-        name="image"
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-
-      <label>Whelped:</label>
-      <input
-        className="createPuppy-input"
-        type="date"
-        value={dateWhelped}
-        onChange={(e) => setDateWhelped(e.target.value)}
-      />
-
-      <label>Ready:</label>
-      <input
-        className="createPuppy-input"
-        type="date"
-        value={dateReady}
-        onChange={(e) => setDateReady(e.target.value)}
-      />
-
-      <label>Sire:</label>
-      <input
-        className="createPuppy-input"
-        type="text"
-        value={sire}
-        onChange={(e) => setSire(e.target.value)}
-      />
-
-      <label>Dam:</label>
-      <input
-        className="createPuppy-input"
-        type="text"
-        value={dam}
-        onChange={(e) => setDam(e.target.value)}
-      />
-
-      <label>Current Vaccinations and worming?</label>
-      <RadioGroup
-        aria-label="YesNo"
-        name="YesNo"
-        value={selectedValue}
-        onChange={handleChange}
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          marginLeft: "10px",
-        }}
-      >
-        <FormControlLabel
-          value="yes"
-          control={<Radio />}
-          label="Yes"
-          onClick={() => {
-            console.log(selectedValue);
-          }}
-        />
-        <FormControlLabel
-          value="no"
-          control={<Radio />}
-          label="No"
-          onClick={() => {
-            console.log(selectedValue);
-          }}
-        />
-      </RadioGroup>
-
-      <label>Price:</label>
-      <input
-        className="createPuppy-input"
-        type="text"
-        value={price}
-        onChange={(e) => setPrice(e.target.value)}
-      />
-
-      {loading ? (
-        <Button variant="contained" className="createPuppy-submit">
-          Submitting Form
-        </Button>
-      ) : (
-        <Button
-          variant="contained"
-          color="primary"
-          className="createPuppy-submit"
-          type="submit"
-        >
-          Submit Form
-        </Button>
-      )}
-    </form>
-  );
 }

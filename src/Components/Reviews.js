@@ -15,6 +15,20 @@ export default function Reviews() {
       .catch((error) => console.error(error));
   }, []);
 
+  if (data.length === 0) {
+    return (
+      <div className="reviews-container" id="reviews">
+        <h1 className="reviews-title">Reviews</h1>
+        <Fade left duration={700}>
+          <div className="review-card-container">
+            <h3>No Reviews Yet</h3>
+          </div>
+          <AddReview />
+        </Fade>
+      </div>
+    );
+  }
+
   return (
     <div className="reviews-container" id="reviews">
       <h1 className="reviews-title">Reviews</h1>

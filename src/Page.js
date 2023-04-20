@@ -1,12 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import About from "./Components/About";
-// import Banner from "./Components/Banner";
 import Drawer from "./Components/Drawer";
 import Header from "./Components/Header";
 import Title from "./Components/Title";
-// import Litters from "./Components/Litters";
-// import Parents from "./Components/Parents";
 import { ThemeProvider, createTheme } from "@mui/material";
 import Updates from "./containers/updates";
 import Puppies from "./Components/Puppies";

@@ -1,15 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
-// import axios from "axios";
 import "../styles/Updates.css";
 import Fade from "react-reveal";
 
 import UpdateCard from "./UpdateCard";
 
 export default function Updates(props) {
-  // const [data, setData] = useState([]);
   const { updates, fetchUpdates } = props;
-  // console.log(props)
   useEffect(() => {
     fetchUpdates();
   }, []);

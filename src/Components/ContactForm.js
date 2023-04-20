@@ -58,7 +58,6 @@ export default function ContactForm() {
         </section>
         <div className="contact-form-container">
           <form onSubmit={submitEmail} className="contact-form">
-            {/* <legend className="contact-title">Contact Us</legend> */}
             <label className="contact-label">Name:</label>
             <input
               className="contact-form-input"

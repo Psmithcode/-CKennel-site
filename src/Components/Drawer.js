@@ -1,15 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-// import Button from "@mui/material/Button";
-// import List from "@mui/material/List";
-// import Divider from "@mui/material/Divider";
-// import ListItem from "@mui/material/ListItem";
-// import ListItemButton from "@mui/material/ListItemButton";
-// import ListItemIcon from "@mui/material/ListItemIcon";
-// import ListItemText from "@mui/material/ListItemText";
-// import InboxIcon from "@mui/icons-material/MoveToInbox";
-// import MailIcon from "@mui/icons-material/Mail";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -17,11 +8,11 @@ import { makeStyles } from "@mui/styles";
 import "../styles/Drawer.css";
 
 export default function SideMenu(props) {
-  //   const [isDrawerOpen, setIsDrawerOpen] = props;
 
   const useStyles = makeStyles((theme) => ({
     drawerPaper: {
-      backgroundColor: "transparent",
+      backgroundColor: "none",
+      color: "rgba(213, 197, 180, .5)",
     },
   }));
 
@@ -36,16 +27,16 @@ export default function SideMenu(props) {
       }}
       open={props.isDrawerOpen}
       onClose={() => props.setIsDrawerOpen(false)}
-      style={{
+      sx={{
         marginTop: "70px",
         zIndex: 1,
         height: "100%",
-        backgroundColor: "rgba(213, 197, 180, .5)",
+        backgroundColor: "none",
       }}
     >
       <Box
         p={2}
-        width="250px"
+        width="150px"
         textAlign="center"
         role="presentation"
         sx={{
@@ -80,11 +71,6 @@ export default function SideMenu(props) {
             About
           </Typography>
         </Link>
-        <a href="#gallery">
-          <Typography className="nav-link" variant="h6">
-            Gallery
-          </Typography>
-        </a>
         <Link to="/contact">
           <Typography className="nav-link" variant="h6">
             Contact

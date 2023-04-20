@@ -12,7 +12,6 @@ export default function UpdateCard(props) {
 
         <p className="updateCard-body-text roboto">{props.par1}</p>
         <Link className="updateCard-link" to={`/updates/${props.id}`}>Read more</Link>
-        {/* <p className="updateCard-body-text roboto">{props.par2}</p> */}
       </div>
     </div>
   );

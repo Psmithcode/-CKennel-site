@@ -47,8 +47,8 @@ export default function CreateUpdate(props) {
       <div className="createUpdate-modal-container">
         <form className="createUpdate-form" onSubmit={handleSubmit}>
           <Button
-          className="createUpdate-exit"
-          variant="contained"
+            className="createUpdate-exit"
+            variant="contained"
             onClick={() => {
               setIsVisible(false);
             }}
@@ -98,48 +98,4 @@ export default function CreateUpdate(props) {
       </div>
     );
   }
-
-  return (
-    <form className="createUpdate-form" onSubmit={handleSubmit}>
-      <h1 className="createUpdate-title">Create an update</h1>
-      <label>Title:</label>
-      <input
-        type="text"
-        required
-        className="update-title"
-        placeholder="Enter update Title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      ></input>
-      <label>Paragraph 1:</label>
-      <textarea
-        required
-        className="update-textarea"
-        value={par1}
-        placeholder="Enter first paragraph"
-        onChange={(e) => setPar1(e.target.value)}
-      ></textarea>
-      <label>Paragraph 2:</label>
-      <textarea
-        className="update-textarea"
-        value={par2}
-        placeholder="Enter second paragraph"
-        onChange={(e) => setPar2(e.target.value)}
-      ></textarea>
-      {loading ? (
-        <Button variant="contained" className="createPuppy-submit">
-          Submitting Form
-        </Button>
-      ) : (
-        <Button
-          variant="contained"
-          color="primary"
-          className="createPuppy-submit"
-          type="submit"
-        >
-          Submit Form
-        </Button>
-      )}
-    </form>
-  );
 }

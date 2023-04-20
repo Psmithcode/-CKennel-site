@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 // import dogPicture from "../Images/lab-wid.jpg";
 import dogPicture from "../Images/image0.jpeg";
 import { Link } from "react-router-dom";
+import { Fade } from "react-reveal";
 
 export default function Title(props) {
   function handleClick() {
@@ -35,15 +36,17 @@ export default function Title(props) {
             marginTop: "30px",
             marginBottom: "40px",
             borderRadius: "0px",
-            backgroundColor: "var(--darkest)"
+            backgroundColor: "var(--darkest)",
           }}
         >
           Contact us
         </Button>
       </Link>
-      <div className="image-container flex-row-center">
-        <img id="dog-picture" src={dogPicture} alt="Lab" />
-      </div>
+      <Fade up>
+        <div className="image-container flex-row-center">
+          <img id="dog-picture" src={dogPicture} alt="Lab" />
+        </div>
+      </Fade>
     </div>
   );
 }
