@@ -52,6 +52,7 @@ export default function PupppyCard(props) {
             />
           </div>
           <ul className="puppyCard-list">
+            <li className="puppyCard-list-text roboto">{`Gender:  ${props.gender}`}</li>
             <li className="puppyCard-list-text roboto">{`Whelped:  ${props.whelpedDate}`}</li>
             <li className="puppyCard-list-text roboto">{`Ready:    ${props.readyDate}`}</li>
             <li className="puppyCard-list-text roboto">{`Dam: ${props.dam}`}</li>

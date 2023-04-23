@@ -36,6 +36,7 @@ export default function Puppies(props) {
               <PuppyCard
                 key={index}
                 id={puppy.id}
+                gender={puppy.gender}
                 imageName={puppy.image}
                 name={puppy.name}
                 whelpedDate={puppy.whelped_date}

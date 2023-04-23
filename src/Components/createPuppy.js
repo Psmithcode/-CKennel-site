@@ -17,9 +17,15 @@ export default function CreatePuppy() {
   const [dam, setDam] = useState("");
   const [loading, setLoading] = useState(false);
   const [selectedValue, setSelectedValue] = useState("");
+  const [gender, setGender] = useState("");
+  // const [color, setColor] = useState("");
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
+  };
+
+  const handleGenderChange = (event) => {
+    setGender(event.target.value);
   };
 
   const handleSubmit = async (event) => {
@@ -41,6 +47,7 @@ export default function CreatePuppy() {
         name,
         dateWhelped,
         dateReady,
+        gender,
         price,
         selectedValue,
         sire,
@@ -87,6 +94,7 @@ export default function CreatePuppy() {
           <h1 className="createPuppy-title">Create a Puppy</h1>
           <label>Name:</label>
           <input
+            required
             type="text"
             className="createPuppy-input"
             value={name}
@@ -95,6 +103,7 @@ export default function CreatePuppy() {
 
           <label>Profile Picture:</label>
           <input
+          required
             className="createPuppy-image-input"
             type="file"
             accept="image/*"
@@ -104,6 +113,7 @@ export default function CreatePuppy() {
 
           <label>Whelped:</label>
           <input
+          required
             className="createPuppy-input"
             type="date"
             value={dateWhelped}
@@ -112,6 +122,7 @@ export default function CreatePuppy() {
 
           <label>Ready:</label>
           <input
+          required
             className="createPuppy-input"
             type="date"
             value={dateReady}
@@ -120,6 +131,7 @@ export default function CreatePuppy() {
 
           <label>Sire:</label>
           <input
+          required
             className="createPuppy-input"
             type="text"
             value={sire}
@@ -128,14 +140,46 @@ export default function CreatePuppy() {
 
           <label>Dam:</label>
           <input
+          required
             className="createPuppy-input"
             type="text"
             value={dam}
             onChange={(e) => setDam(e.target.value)}
           />
+          <label>Gender: </label>
+          <RadioGroup
+            aria-label="MaleFemale"
+            name="MaleFemale"
+            required
+            value={gender}
+            onChange={handleGenderChange}
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              marginLeft: "10px",
+            }}
+          >
+            <FormControlLabel
+              value="Male"
+              control={<Radio />}
+              label="Male"
+              onClick={() => {
+                console.log(gender);
+              }}
+            />
+            <FormControlLabel
+              value="Female"
+              control={<Radio />}
+              label="Female"
+              onClick={() => {
+                console.log(gender);
+              }}
+            />
+          </RadioGroup>
 
           <label>Current Vaccinations and worming?</label>
           <RadioGroup
+          required
             aria-label="YesNo"
             name="YesNo"
             value={selectedValue}
@@ -166,6 +210,7 @@ export default function CreatePuppy() {
 
           <label>Price:</label>
           <input
+          required
             className="createPuppy-input"
             type="text"
             value={price}

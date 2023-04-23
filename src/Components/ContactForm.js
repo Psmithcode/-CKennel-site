@@ -20,7 +20,7 @@ export default function ContactForm() {
   const submitEmail = async (e) => {
     e.preventDefault();
     console.log({ mailerState });
-    const response = await fetch("https://barclabs.vercel.app/send", {
+    const response = await fetch(process.env.REACT_APP_URL_SEND, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
