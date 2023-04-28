@@ -41,6 +41,15 @@ export default function About(props) {
               We welcome anyone who wants to come see the puppies in person!
               This will be by appointment, contact us to get in touch!
             </li>
+            <li>
+              Our current breeding pair has a strong background and lineage in hunting.
+            </li>
+            <li>
+              All puppies will be current on vaccines, worming, and veterinary checkups.
+            </li>
+            <li>
+              All of our puppies are certified with the American Kennel Club.
+            </li>
           </ul>
         </div>
       </Fade>
